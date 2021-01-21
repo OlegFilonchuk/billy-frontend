@@ -1,19 +1,52 @@
 import React, { FC, useState } from 'react';
 import TopPanel from './TopPanel';
-import RangeDrawer from './RangeDrawer';
+import Drawer from '../common/Drawer';
+import Backdrop from '../common/Backdrop';
 
 const Layout: FC = ({ children }) => {
-  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [rangesOpen, setRangesOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleDrawerOpen = () => setDrawerOpen((prevState) => !prevState);
+  const toggleRangesOpen = () => {
+    if (menuOpen) {
+      toggleMenuOpen();
+    }
+    setRangesOpen((prevState) => !prevState);
+  };
+  const toggleMenuOpen = () => {
+    if (rangesOpen) {
+      toggleRangesOpen();
+    }
+    setMenuOpen((prevState) => !prevState);
+  };
+
+  const closeRanges = () => setRangesOpen(false);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <div>
-      <TopPanel toggleDrawerOpen={toggleDrawerOpen} />
+      <TopPanel
+        onRangesToggle={toggleRangesOpen}
+        onMenuToggle={toggleMenuOpen}
+      />
       <div className="h-16" />
-      <RangeDrawer open={drawerOpen} />
+
+      <Drawer open={rangesOpen} side="left">
+        range
+      </Drawer>
+
+      <Drawer side="right" open={menuOpen}>
+        menu
+      </Drawer>
 
       {children}
+      <Backdrop
+        open={rangesOpen || menuOpen}
+        onClick={() => {
+          closeRanges();
+          closeMenu();
+        }}
+      />
     </div>
   );
 };
