@@ -1,5 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { TWTransitionDuration } from '../../types';
+import { TRANSITION_DURATION } from '../../constats';
 
 type Props = {
   open: boolean;
@@ -7,7 +8,11 @@ type Props = {
   onClick: () => void;
 };
 
-const Backdrop: FC<Props> = ({ open, transitionDuration = 300, onClick }) => {
+const Backdrop: FC<Props> = ({
+  open,
+  transitionDuration = TRANSITION_DURATION,
+  onClick,
+}) => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -16,9 +21,9 @@ const Backdrop: FC<Props> = ({ open, transitionDuration = 300, onClick }) => {
     } else {
       setTimeout(() => {
         setShow(false);
-      }, 300);
+      }, transitionDuration);
     }
-  }, [open]);
+  }, [open, transitionDuration]);
 
   return (
     <div

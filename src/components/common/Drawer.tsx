@@ -1,5 +1,7 @@
 import React, { FC } from 'react';
 import { TWTransitionDuration } from '../../types';
+import { TRANSITION_DURATION } from '../../constats';
+import TopPanelPlaceholder from './TopPanelPlaceholder';
 
 type Props = {
   side: 'left' | 'right';
@@ -11,7 +13,7 @@ const Drawer: FC<Props> = ({
   side,
   open,
   children,
-  transitionDuration = 300,
+  transitionDuration = TRANSITION_DURATION,
 }) => {
   const closedClassName =
     side === 'left' ? '-translate-x-full' : 'translate-x-full';
@@ -24,7 +26,9 @@ const Drawer: FC<Props> = ({
         open ? 'translate-x-0' : closedClassName
       }`}
     >
-      {children}
+      <TopPanelPlaceholder />
+
+      <div className="p-2">{children}</div>
     </aside>
   );
 };
