@@ -1,14 +1,15 @@
-import React, { FC } from 'react';
+import React, { FC, HTMLProps } from 'react';
 
-type Props = {
+type Props = HTMLProps<HTMLButtonElement> & {
   column?: boolean;
   type?: 'button' | 'submit' | 'reset';
-  [p: string]: any;
+  className?: string;
 };
 
 const Button: FC<Props> = ({
   type = 'button',
   column = false,
+  className,
   children,
   ...rest
 }) => {
@@ -19,7 +20,7 @@ const Button: FC<Props> = ({
       {...rest}
       className={`p-2 rounded-sm flex justify-center items-center ${
         column && 'flex-col'
-      }`}
+      } ${className || ''}`}
     >
       {children}
     </button>

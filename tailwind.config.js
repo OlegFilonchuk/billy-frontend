@@ -18,6 +18,8 @@ module.exports = {
       current: 'currentColor',
       main: '#7ac793',
       bg: '#f2fff6',
+      accent: '#35bb90',
+      textLight: '#f7fffa',
 
       black: colors.black,
       white: colors.white,

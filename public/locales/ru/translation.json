@@ -1,3 +1,7 @@
 {
-  "sample": "Русский текст"
+  "sample": "Русский текст",
+  "Categories": "Categories",
+  "Accounts": "Accounts",
+  "Currencies": "Currencies",
+  "Settings": "Settings"
 }

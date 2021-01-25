@@ -5,6 +5,8 @@ import {
   IoWalletOutline,
   RiBookletLine,
 } from 'react-icons/all';
+import { useTranslation } from 'react-i18next';
+import { IconContext } from 'react-icons';
 import TopPanel from './TopPanel';
 import Drawer from '../common/Drawer';
 import Backdrop from '../common/Backdrop';
@@ -17,6 +19,8 @@ const Layout: FC = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [blocked, setBlocked] = useState(false);
   const transitionDuration = TRANSITION_DURATION;
+
+  const { t } = useTranslation();
 
   const toggleRangesOpen = () => {
     if (blocked) return;
@@ -54,23 +58,29 @@ const Layout: FC = ({ children }) => {
       </Drawer>
 
       <Drawer side="right" open={menuOpen}>
-        <div className="flex flex-col items-center justify-start">
-          <Button>
-            <RiBookletLine />
-          </Button>
+        <IconContext.Provider value={{ color: '#35bb90', size: '32' }}>
+          <div className="flex flex-col items-center justify-start">
+            <Button column>
+              <RiBookletLine />
+              <span className="py-2">{t('Categories')}</span>
+            </Button>
 
-          <Button>
-            <IoWalletOutline />
-          </Button>
+            <Button column>
+              <IoWalletOutline />
+              <span className="py-2">{t('Accounts')}</span>
+            </Button>
 
-          <Button>
-            <HiOutlineCurrencyDollar />
-          </Button>
+            <Button column>
+              <HiOutlineCurrencyDollar />
+              <span className="py-2">{t('Currencies')}</span>
+            </Button>
 
-          <Button>
-            <IoSettingsOutline />
-          </Button>
-        </div>
+            <Button column>
+              <IoSettingsOutline />
+              <span className="py-2">{t('Settings')}</span>
+            </Button>
+          </div>
+        </IconContext.Provider>
       </Drawer>
 
       {children}
