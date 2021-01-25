@@ -3,5 +3,12 @@
   "Categories": "Categories",
   "Accounts": "Accounts",
   "Currencies": "Currencies",
-  "Settings": "Settings"
+  "Settings": "Settings",
+  "Day": "Day",
+  "Week": "Week",
+  "Month": "Month",
+  "Year": "Year",
+  "All": "All",
+  "Pick Date": "Pick Date",
+  "Date Range": "Date Range"
 }

@@ -1,5 +1,6 @@
 import React, { FC, useState } from 'react';
 import {
+  BiCalendarEvent,
   HiOutlineCurrencyDollar,
   IoSettingsOutline,
   IoWalletOutline,
@@ -54,7 +55,36 @@ const Layout: FC = ({ children }) => {
       <TopPanelPlaceholder />
 
       <Drawer open={rangesOpen} side="left">
-        range
+        <div className="flex flex-col items-center justify-start">
+          <Button className="border-2 rounded-md border-accent w-full mb-2">
+            {t('Day')}
+          </Button>
+
+          <Button className="border-2 rounded-md border-accent w-full mb-2">
+            {t('Week')}
+          </Button>
+
+          <Button className="border-2 rounded-md border-accent w-full mb-2">
+            {t('Month')}
+          </Button>
+
+          <Button className="border-2 rounded-md border-accent w-full mb-2">
+            {t('Year')}
+          </Button>
+
+          <Button className="border-2 rounded-md border-accent w-full mb-2">
+            {t('All')}
+          </Button>
+
+          <Button className="border-2 rounded-md border-accent w-full mb-2">
+            {t('Date Range')}
+          </Button>
+
+          <Button className="border-2 rounded-md border-accent w-full mb-2">
+            <BiCalendarEvent size={24} color="#35bb90" />
+            {t('Pick Date')}
+          </Button>
+        </div>
       </Drawer>
 
       <Drawer side="right" open={menuOpen}>
