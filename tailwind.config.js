@@ -19,6 +19,7 @@ module.exports = {
       main: '#7ac793',
       bg: '#f2fff6',
       accent: '#35bb90',
+      error: '#f68685',
       textLight: '#f7fffa',
 
       black: colors.black,

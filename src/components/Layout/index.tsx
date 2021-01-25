@@ -11,8 +11,7 @@ import { IconContext } from 'react-icons';
 import TopPanel from './TopPanel';
 import Drawer from '../common/Drawer';
 import Backdrop from '../common/Backdrop';
-import { TRANSITION_DURATION } from '../../constats';
-import TopPanelPlaceholder from '../common/TopPanelPlaceholder';
+import { TRANSITION_DURATION } from '../../constants';
 import Button from '../common/Button';
 
 const Layout: FC = ({ children }) => {
@@ -47,12 +46,11 @@ const Layout: FC = ({ children }) => {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <div>
+    <div className="h-1 min-h-screen">
       <TopPanel
         onRangesToggle={toggleRangesOpen}
         onMenuToggle={toggleMenuOpen}
       />
-      <TopPanelPlaceholder />
 
       <Drawer open={rangesOpen} side="left">
         <div className="flex flex-col items-center justify-start">
@@ -81,14 +79,14 @@ const Layout: FC = ({ children }) => {
           </Button>
 
           <Button className="border-2 rounded-md border-accent w-full mb-2">
-            <BiCalendarEvent size={24} color="#35bb90" />
+            <BiCalendarEvent size={24} className="text-accent" />
             {t('Pick Date')}
           </Button>
         </div>
       </Drawer>
 
       <Drawer side="right" open={menuOpen}>
-        <IconContext.Provider value={{ color: '#35bb90', size: '32' }}>
+        <IconContext.Provider value={{ size: '32', className: 'text-accent' }}>
           <div className="flex flex-col items-center justify-start">
             <Button column>
               <RiBookletLine />
@@ -113,7 +111,8 @@ const Layout: FC = ({ children }) => {
         </IconContext.Provider>
       </Drawer>
 
-      {children}
+      <main className="h-full pt-16">{children}</main>
+
       <Backdrop
         open={rangesOpen || menuOpen}
         onClick={() => {

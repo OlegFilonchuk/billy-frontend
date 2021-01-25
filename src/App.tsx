@@ -1,13 +1,20 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layout from './components/Layout';
+import Main from './components/Main';
 
 function App() {
-  const { t } = useTranslation();
-
   return (
     <div className="container p-0">
-      <Layout>{t('sample')}</Layout>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/">
+            <Layout>
+              <Main />
+            </Layout>
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

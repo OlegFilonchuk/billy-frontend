@@ -1,6 +1,6 @@
 import React, { FC, useEffect, useState } from 'react';
 import { TWTransitionDuration } from '../../types';
-import { TRANSITION_DURATION } from '../../constats';
+import { TRANSITION_DURATION } from '../../constants';
 
 type Props = {
   open: boolean;

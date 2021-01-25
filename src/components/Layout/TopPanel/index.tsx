@@ -10,7 +10,7 @@ type Props = {
 
 const TopPanel: FC<Props> = ({ onRangesToggle, onMenuToggle }) => {
   return (
-    <div className="bg-main h-16 w-full text-bg flex flex-row flex-nowrap items-center justify-between p-2 shadow-sm fixed z-50">
+    <div className="bg-main h-16 w-full text-textLight flex flex-row flex-nowrap items-center justify-between p-2 shadow-sm fixed z-50">
       <Button onClick={onRangesToggle}>
         <BiMenuAltLeft size={24} />
       </Button>

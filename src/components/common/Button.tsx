@@ -18,7 +18,7 @@ const Button: FC<Props> = ({
       // eslint-disable-next-line react/button-has-type
       type={type}
       {...rest}
-      className={`p-2 rounded-sm flex justify-center items-center ${
+      className={`p-2 rounded-sm inline-flex justify-center items-center ${
         column && 'flex-col'
       } ${className || ''}`}
     >

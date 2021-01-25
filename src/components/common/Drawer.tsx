@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 import { TWTransitionDuration } from '../../types';
-import { TRANSITION_DURATION } from '../../constats';
-import TopPanelPlaceholder from './TopPanelPlaceholder';
+import { TRANSITION_DURATION } from '../../constants';
 
 type Props = {
   side: 'left' | 'right';
@@ -20,14 +19,12 @@ const Drawer: FC<Props> = ({
 
   return (
     <aside
-      className={`transform top-0 ${
+      className={`pt-16 transform top-0 ${
         side === 'left' ? 'left-0' : 'right-0'
       } w-52 bg-bg fixed h-full overflow-auto ease-in-out transition-all duration-${transitionDuration} z-40 ${
         open ? 'translate-x-0' : closedClassName
       }`}
     >
-      <TopPanelPlaceholder />
-
       <div className="p-2">{children}</div>
     </aside>
   );
