@@ -54,31 +54,31 @@ const Layout: FC = ({ children }) => {
 
       <Drawer open={rangesOpen} side="left">
         <div className="flex flex-col items-center justify-start">
-          <Button className="border-2 rounded-md border-accent w-full mb-2">
+          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
             {t('Day')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent w-full mb-2">
+          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
             {t('Week')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent w-full mb-2">
+          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
             {t('Month')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent w-full mb-2">
+          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
             {t('Year')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent w-full mb-2">
+          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
             {t('All')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent w-full mb-2">
+          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
             {t('Date Range')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent w-full mb-2">
+          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
             <BiCalendarEvent size={24} className="text-accent" />
             {t('Pick Date')}
           </Button>
@@ -88,22 +88,22 @@ const Layout: FC = ({ children }) => {
       <Drawer side="right" open={menuOpen}>
         <IconContext.Provider value={{ size: '32', className: 'text-accent' }}>
           <div className="flex flex-col items-center justify-start">
-            <Button column>
+            <Button column fullWidth>
               <RiBookletLine />
               <span className="py-2">{t('Categories')}</span>
             </Button>
 
-            <Button column>
+            <Button column fullWidth>
               <IoWalletOutline />
               <span className="py-2">{t('Accounts')}</span>
             </Button>
 
-            <Button column>
+            <Button column fullWidth>
               <HiOutlineCurrencyDollar />
               <span className="py-2">{t('Currencies')}</span>
             </Button>
 
-            <Button column>
+            <Button column fullWidth>
               <IoSettingsOutline />
               <span className="py-2">{t('Settings')}</span>
             </Button>

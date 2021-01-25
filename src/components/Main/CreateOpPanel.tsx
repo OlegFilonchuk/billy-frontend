@@ -4,6 +4,7 @@ import { ImMinus, ImPlus } from 'react-icons/all';
 import { positiveBalance as balance } from '../../mocks';
 import { CURRENCY } from '../../constants';
 import Button from '../common/Button';
+import { format } from '../../utils/numbersHelpers';
 
 const CreateOpPanel: FC = () => {
   const isPositive = balance > 0;
@@ -19,7 +20,7 @@ const CreateOpPanel: FC = () => {
       >
         {t('Balance')}
 
-        {` ${balance} `}
+        <span className="font-bold">&nbsp;{format(balance)}&nbsp;</span>
 
         {t(CURRENCY)}
       </div>
