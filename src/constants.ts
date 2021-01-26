@@ -1,6 +1,6 @@
 export const TRANSITION_DURATION = 300;
 
-export const CURRENCY = 'hrn';
+export const CURRENCY = 'HRN';
 
 export const ROUTES = {
   root: '/',

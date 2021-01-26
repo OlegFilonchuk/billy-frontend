@@ -21,20 +21,29 @@ const keys = [
 ];
 
 type KeyProps = {
-  value: string;
+  sign: string;
+  onClick: (s: string) => void;
 };
 
-const Key: FC<KeyProps> = ({ value }) => (
-  <Button className="py-5 flex justify-center items-center text-3xl" outlined>
-    {value}
+const Key: FC<KeyProps> = ({ sign, onClick }) => (
+  <Button
+    onClick={() => onClick(sign)}
+    className="py-5 flex justify-center items-center text-3xl"
+    outlined
+  >
+    {sign}
   </Button>
 );
 
-const Keyboard: FC = () => {
+type KeyboardProps = {
+  handleChange: (val: string) => void;
+};
+
+const Keyboard: FC<KeyboardProps> = ({ handleChange }) => {
   return (
     <div className="grid grid-cols-4 grid-rows-4 gap-1">
       {keys.map((key) => (
-        <Key value={key.toString()} key={key} />
+        <Key sign={key.toString()} onClick={handleChange} key={key} />
       ))}
     </div>
   );

@@ -1,10 +1,17 @@
-import React, { FC } from 'react';
-import { BiCalendarEvent, FiPenTool } from 'react-icons/all';
+import React, { FC, useState } from 'react';
+import {
+  BiCalendarEvent,
+  FaMoneyBillAlt,
+  FiPenTool,
+  IoBackspaceSharp,
+} from 'react-icons/all';
 import { useTranslation } from 'react-i18next';
 import { OperationType } from '../../types';
 import { formatDate } from '../../utils/dateHelpers';
 import Keyboard from './Keyboard';
 import Button from '../common/Button';
+import { isNumber } from '../../utils/stringHelpers';
+import { CURRENCY } from '../../constants';
 
 type Props = {
   opType: OperationType;
@@ -12,6 +19,23 @@ type Props = {
 
 const NewOp: FC<Props> = ({ opType }) => {
   const { t } = useTranslation();
+
+  const [value, setValue] = useState('0');
+
+  const handleBackspace = () => {
+    setValue((prevState) =>
+      value.length === 1 ? '0' : prevState.substr(0, prevState.length - 1),
+    );
+  };
+
+  const handleChange = (val: string) => {
+    if (value.length >= 9) return;
+    if (!isNumber(val)) {
+      return;
+    }
+
+    setValue((prevState) => (prevState === '0' ? val : prevState + val));
+  };
 
   return (
     <div className="p-4 h-full flex flex-col items-stretch justify-between">
@@ -22,8 +46,20 @@ const NewOp: FC<Props> = ({ opType }) => {
           {formatDate(new Date())}
         </div>
 
-        <div className="shadow-inner text-textLight rounded-sm p-4 text-5xl flex items-center justify-center bg-main">
-          tests
+        <div className="shadow-inner text-textLight rounded-sm p-1 flex items-center justify-between bg-main h-16">
+          <div className="flex flex-col justify-evenly items-center border-r border-textLight px-2">
+            <FaMoneyBillAlt size={24} />
+
+            <div className="text-sm text-black">{CURRENCY}</div>
+          </div>
+
+          <div className="text-4xl">{value}</div>
+
+          <div>
+            <Button onClick={handleBackspace}>
+              <IoBackspaceSharp size={32} />
+            </Button>
+          </div>
         </div>
 
         <div className="my-6">
@@ -49,7 +85,7 @@ const NewOp: FC<Props> = ({ opType }) => {
       </div>
 
       <div>
-        <Keyboard />
+        <Keyboard handleChange={handleChange} />
 
         <Button fullWidth outlined className="py-6 mt-1 uppercase">
           {t('Pick a Category')}
