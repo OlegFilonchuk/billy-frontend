@@ -1,36 +1,30 @@
 import React, { FC } from 'react';
-import { useTranslation } from 'react-i18next';
 import { ImMinus, ImPlus } from 'react-icons/all';
-import { positiveBalance as balance } from '../../mocks';
-import { CURRENCY } from '../../constants';
+import { useHistory } from 'react-router-dom';
 import Button from '../common/Button';
-import { format } from '../../utils/numbersHelpers';
+import { OperationType } from '../../types';
 
 const CreateOpPanel: FC = () => {
-  const isPositive = balance > 0;
+  const history = useHistory();
 
-  const { t } = useTranslation();
+  const handleCreateOperation = (opType: OperationType) => {
+    history.push(`/${opType}`);
+  };
 
   return (
     <div className="p-4">
-      <div
-        className={`shadow-inner text-textLight h-12 rounded-sm p-2 mx-12 text-lg flex items-center justify-center ${
-          isPositive ? 'bg-main' : 'bg-error'
-        }`}
-      >
-        {t('Balance')}
-
-        <span className="font-bold">&nbsp;{format(balance)}&nbsp;</span>
-
-        {t(CURRENCY)}
-      </div>
-
       <div className="flex justify-around p-2">
-        <Button className="p-8 border-8 rounded-full border-error">
+        <Button
+          className="p-8 border-8 rounded-full border-error"
+          onClick={() => handleCreateOperation('expense')}
+        >
           <ImMinus size={30} className="text-error" />
         </Button>
 
-        <Button className="p-8 border-8 rounded-full border-main">
+        <Button
+          className="p-8 border-8 rounded-full border-main"
+          onClick={() => handleCreateOperation('income')}
+        >
           <ImPlus size={30} className="text-main" />
         </Button>
       </div>

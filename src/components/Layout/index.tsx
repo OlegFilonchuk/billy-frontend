@@ -54,31 +54,31 @@ const Layout: FC = ({ children }) => {
 
       <Drawer open={rangesOpen} side="left">
         <div className="flex flex-col items-center justify-start">
-          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
+          <Button outlined className="border-accent mb-2" fullWidth>
             {t('Day')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
+          <Button outlined className="border-accent mb-2" fullWidth>
             {t('Week')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
+          <Button outlined className="border-accent mb-2" fullWidth>
             {t('Month')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
+          <Button outlined className="border-accent mb-2" fullWidth>
             {t('Year')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
+          <Button outlined className="border-accent mb-2" fullWidth>
             {t('All')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
+          <Button outlined className="border-accent mb-2" fullWidth>
             {t('Date Range')}
           </Button>
 
-          <Button className="border-2 rounded-md border-accent mb-2" fullWidth>
+          <Button outlined className="border-accent mb-2" fullWidth>
             <BiCalendarEvent size={24} className="text-accent" />
             {t('Pick Date')}
           </Button>
@@ -111,7 +111,7 @@ const Layout: FC = ({ children }) => {
         </IconContext.Provider>
       </Drawer>
 
-      <main className="h-full pt-16">{children}</main>
+      <main className="h-full pt-16 bg-bg">{children}</main>
 
       <Backdrop
         open={rangesOpen || menuOpen}

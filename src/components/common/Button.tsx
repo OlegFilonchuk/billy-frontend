@@ -5,11 +5,13 @@ type Props = HTMLProps<HTMLButtonElement> & {
   type?: 'button' | 'submit' | 'reset';
   className?: string;
   fullWidth?: boolean;
+  outlined?: boolean;
 };
 
 const Button: FC<Props> = ({
   type = 'button',
   column = false,
+  outlined = false,
   className,
   fullWidth,
   children,
@@ -20,9 +22,11 @@ const Button: FC<Props> = ({
       // eslint-disable-next-line react/button-has-type
       type={type}
       {...rest}
-      className={`transition-colors duration-150 focus:ring ring-accent p-2 rounded-sm inline-flex justify-center items-center ${
+      className={`transition-colors duration-150 focus:ring ring-accent p-2 rounded inline-flex justify-center items-center ${
         column ? 'flex-col' : ''
-      } ${fullWidth ? 'w-full' : ''} ${className || ''}`}
+      } ${fullWidth ? 'w-full' : ''} ${outlined ? 'border border-main' : ''} ${
+        className || ''
+      }`}
     >
       {children}
     </button>

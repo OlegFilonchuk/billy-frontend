@@ -5,7 +5,7 @@
  * @return {string} string representing provided number
  */
 
-export const format = (n: number, digits = 2): string =>
+export const formatNumber = (n: number, digits = 2): string =>
   n
     .toFixed(digits)
     .replace(/\B(?=(\d{3})+(?!\d))/g, String.fromCharCode(0x2009)); // half-space symbol

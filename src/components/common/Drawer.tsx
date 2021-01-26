@@ -25,7 +25,7 @@ const Drawer: FC<Props> = ({
         open ? 'translate-x-0' : closedClassName
       }`}
     >
-      <div className="p-2">{children}</div>
+      <div className="p-4">{children}</div>
     </aside>
   );
 };
