@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layout from './components/Layout';
 import Main from './components/Main';
 import NewOp from './components/NewOp';
+import { ROUTES } from './constants';
 
 function App() {
   return (
@@ -15,13 +16,13 @@ function App() {
             </Layout>
           </Route>
 
-          <Route path="/income" exact>
+          <Route path={ROUTES.income} exact>
             <Layout>
               <NewOp opType="income" />
             </Layout>
           </Route>
 
-          <Route path="/expense" exact>
+          <Route path={ROUTES.expense} exact>
             <Layout>
               <NewOp opType="expense" />
             </Layout>

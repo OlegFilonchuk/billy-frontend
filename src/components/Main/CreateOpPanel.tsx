@@ -3,12 +3,13 @@ import { ImMinus, ImPlus } from 'react-icons/all';
 import { useHistory } from 'react-router-dom';
 import Button from '../common/Button';
 import { OperationType } from '../../types';
+import { ROUTES } from '../../constants';
 
 const CreateOpPanel: FC = () => {
   const history = useHistory();
 
   const handleCreateOperation = (opType: OperationType) => {
-    history.push(`/${opType}`);
+    history.push(opType === 'income' ? ROUTES.income : ROUTES.expense);
   };
 
   return (
