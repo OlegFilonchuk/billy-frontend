@@ -33,6 +33,7 @@ const TopPanel: FC<Props> = ({ onRangesToggle, onMenuToggle }) => {
 
             <div className="flex-1 h-full">
               <img src={logo} alt="Billy" className="h-6 object-contain" />
+              <div className="text-sm px-1">{t('All Accounts')}</div>
             </div>
 
             <Button onClick={onMenuToggle}>

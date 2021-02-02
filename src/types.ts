@@ -77,6 +77,7 @@ export type ProfileData = {
 export type Category = {
   id: Id;
   name: string;
+  icon: any;
   type: OperationType;
   createDate: DateString;
   updateDate: DateString;

@@ -35,11 +35,15 @@ const CategoryPicker: FC<Props> = ({ open, opType }) => {
       } ${show ? '' : 'invisible'}`}
     >
       <div className="grid grid-cols-3 gap-1">
-        {categories.map((cat) => (
-          <Button key={cat.id} outlined className="shadow-md">
-            {cat.name}
-          </Button>
-        ))}
+        {categories.map((cat) => {
+          const Icon = cat.icon;
+          return (
+            <Button key={cat.id} outlined column className="shadow-md">
+              <Icon size={30} />
+              {cat.name}
+            </Button>
+          );
+        })}
       </div>
 
       <div className="grid grid-cols-3 gap-1 mt-4">
