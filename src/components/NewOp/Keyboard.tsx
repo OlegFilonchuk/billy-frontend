@@ -1,24 +1,32 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import Button from '../common/Button';
+import { ArithmeticOperation } from './index';
 
-const keys = [
-  '1',
-  '2',
-  '3',
-  '+',
-  '4',
-  '5',
-  '6',
-  '-',
-  '7',
-  '8',
-  '9',
-  '×',
-  '.',
-  '0',
-  '=',
-  '÷',
+enum KeyType {
+  Digit = 'Digit',
+  Operation = 'Operation',
+  Equals = 'Equals',
+  Dot = 'Dot',
+}
+
+const keys: { value: string; type: KeyType }[] = [
+  { value: '1', type: KeyType.Digit },
+  { value: '2', type: KeyType.Digit },
+  { value: '3', type: KeyType.Digit },
+  { value: '+', type: KeyType.Operation },
+  { value: '4', type: KeyType.Digit },
+  { value: '5', type: KeyType.Digit },
+  { value: '6', type: KeyType.Digit },
+  { value: '-', type: KeyType.Operation },
+  { value: '7', type: KeyType.Digit },
+  { value: '8', type: KeyType.Digit },
+  { value: '9', type: KeyType.Digit },
+  { value: '*', type: KeyType.Operation },
+  { value: '.', type: KeyType.Dot },
+  { value: '0', type: KeyType.Digit },
+  { value: '=', type: KeyType.Equals },
+  { value: '/', type: KeyType.Operation },
 ];
 
 type KeyProps = {
@@ -40,10 +48,27 @@ type KeyboardProps = {
   open: boolean;
   handleChange: (val: string) => void;
   handleConfirm: () => void;
+  handleOperation: (op: ArithmeticOperation) => void;
+  handleEquals: () => void;
 };
 
-const Keyboard: FC<KeyboardProps> = ({ open, handleChange, handleConfirm }) => {
+const Keyboard: FC<KeyboardProps> = ({
+  open,
+  handleChange,
+  handleConfirm,
+  handleOperation,
+  handleEquals,
+}) => {
   const { t } = useTranslation();
+
+  const handlersMap: Record<KeyType, any> = {
+    [KeyType.Digit]: handleChange,
+    [KeyType.Operation]: handleOperation,
+    [KeyType.Equals]: handleEquals,
+    [KeyType.Dot]: () => {
+      console.log('dot');
+    },
+  };
 
   return (
     <div
@@ -52,8 +77,8 @@ const Keyboard: FC<KeyboardProps> = ({ open, handleChange, handleConfirm }) => {
       }`}
     >
       <div className="grid grid-cols-4 grid-rows-4 gap-1">
-        {keys.map((key) => (
-          <Key sign={key.toString()} onClick={handleChange} key={key} />
+        {keys.map(({ value, type }) => (
+          <Key sign={value} onClick={handlersMap[type]} key={value} />
         ))}
       </div>
 

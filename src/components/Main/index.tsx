@@ -27,7 +27,7 @@ const Main: FC = () => {
         })}
 
         <div className="col-start-2 row-start-2 col-end-4 row-end-5 flex items-center justify-center p-2">
-          <div className="rounded-full bg-red-300 w-52 h-52 shadow-inner flex items-center justify-center">
+          <div className="rounded-full bg-gray-400 w-52 h-52 shadow-inner flex items-center justify-center">
             <div className="rounded-full w-32 h-32 bg-bg shadow-md flex items-center justify-center flex-col">
               <div className="text-accent">
                 {`${weeklyIncome} ${t(CURRENCY)}`}

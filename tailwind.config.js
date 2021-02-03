@@ -77,6 +77,7 @@ module.exports = {
       ping: 'ping 1s cubic-bezier(0, 0, 0.2, 1) infinite',
       pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       bounce: 'bounce 1s infinite',
+      error: 'error 0.5s',
     },
     backgroundColor: (theme) => theme('colors'),
     backgroundImage: {
@@ -434,6 +435,36 @@ module.exports = {
         '50%': {
           transform: 'none',
           animationTimingFunction: 'cubic-bezier(0,0,0.2,1)',
+        },
+      },
+      error: {
+        '0%, 100%': {
+          transform: 'translateX(0px)',
+          timingFunction: 'ease-in',
+        },
+        '37%': {
+          transform: 'translateX(5px)',
+          timingFunction: 'ease-out',
+        },
+        '55%': {
+          transform: 'translateX(-5px)',
+          timingFunction: 'ease-in',
+        },
+        '73%': {
+          transform: 'translateX(4px)',
+          timingFunction: 'ease-out',
+        },
+        '82%': {
+          transform: 'translateX(-4px)',
+          timingFunction: 'ease-in',
+        },
+        '91%': {
+          transform: 'translateX(2px)',
+          timingFunction: 'ease-out',
+        },
+        '96%': {
+          transform: 'translateX(-2px)',
+          timingFunction: 'ease-in',
         },
       },
     },
