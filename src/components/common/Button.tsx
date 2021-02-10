@@ -3,7 +3,6 @@ import React, { FC, HTMLProps } from 'react';
 type Props = HTMLProps<HTMLButtonElement> & {
   column?: boolean;
   type?: 'button' | 'submit' | 'reset';
-  className?: string;
   fullWidth?: boolean;
   outlined?: boolean;
 };

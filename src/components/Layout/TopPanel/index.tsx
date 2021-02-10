@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation, useHistory } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import Button from '../../common/Button';
-import logo from './billy_logo.png';
+import logo from '../../../assets/logo_white.png';
 import { ROUTES } from '../../../constants';
 
 type Props = {

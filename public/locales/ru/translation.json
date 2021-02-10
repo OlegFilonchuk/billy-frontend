@@ -19,5 +19,17 @@
   "New Income": "New Income",
   "New Expense": "New Expense",
   "Add": "Add",
-  "All Accounts": "All Accounts"
+  "All Accounts": "All Accounts",
+  "Email": "Электронная почта",
+  "Password": "Пароль",
+  "Show": "Показать",
+  "Hide": "Спрятать",
+  "Name": "Имя",
+  "Repeat Password": "Повторите пароль",
+  "Do not have an account?": "Нет аккаунта?",
+  "Sign up": "Зарегистрироваться",
+  "Welcome": "Добро пожаловать",
+  "Login": "Авторизоваться",
+  "Already have an account?": "Уже есть аккаунт?",
+  "Create an account": "Завести аккаунт"
 }

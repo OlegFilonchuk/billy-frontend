@@ -19,6 +19,7 @@ import Button from '../common/Button';
 import { CURRENCY } from '../../constants';
 import CategoryPicker from './CategoryPicker';
 import './style.css';
+import Input from '../common/Input';
 
 type Props = {
   opType: OperationType;
@@ -177,7 +178,8 @@ const NewOp: FC<Props> = ({ opType }) => {
                 className="text-main transform -rotate-90 absolute top-1.5 left-1.5"
               />
 
-              <input
+              <Input
+                fullWidth
                 value={note}
                 onKeyDown={(ev) => {
                   ev.stopPropagation();
@@ -187,7 +189,7 @@ const NewOp: FC<Props> = ({ opType }) => {
                 type="text"
                 name="note"
                 id="note"
-                className="w-full bg-transparent pl-8 border-b focus:border-main transition-colors caret-main h-8"
+                className="pl-8"
               />
             </div>
           </div>

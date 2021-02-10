@@ -19,5 +19,17 @@
   "New Income": "New Income",
   "New Expense": "New Expense",
   "Add": "Add",
-  "All Accounts": "All Accounts"
+  "All Accounts": "All Accounts",
+  "Email": "Email",
+  "Password": "Password",
+  "Show": "Show",
+  "Hide": "Hide",
+  "Name": "Name",
+  "Repeat Password": "Repeat Password",
+  "Do not have an account?": "Do not have an acount?",
+  "Sign up": "Sign up",
+  "Welcome": "Welcome",
+  "Login": "Login",
+  "Already have an account?": "Already have an account?",
+  "Create an account": "Create an account"
 }
