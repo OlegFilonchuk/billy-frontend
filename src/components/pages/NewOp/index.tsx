@@ -12,17 +12,17 @@ import {
   IoBackspaceSharp,
 } from 'react-icons/all';
 import { useTranslation } from 'react-i18next';
-import { OperationType } from '../../types';
-import { formatDate } from '../../utils/dateHelpers';
+import { OpType } from '../../../types';
+import { formatDate } from '../../../utils/dateHelpers';
 import Keyboard from './Keyboard';
-import Button from '../common/Button';
-import { CURRENCY } from '../../constants';
+import Button from '../../common/Button';
+import { CURRENCY } from '../../../constants';
 import CategoryPicker from './CategoryPicker';
 import './style.css';
-import Input from '../common/Input';
+import Input from '../../common/Input';
 
 type Props = {
-  opType: OperationType;
+  opType: OpType;
 };
 
 const maxLength = 9;

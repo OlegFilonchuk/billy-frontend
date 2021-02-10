@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import CreateOpPanel from './CreateOpPanel';
 import Balance from './Balance';
-import { expenseCategories, weeklyExpense, weeklyIncome } from '../../mocks';
-import Button from '../common/Button';
-import { CURRENCY } from '../../constants';
+import { expenseCategories, weeklyExpense, weeklyIncome } from '../../../mocks';
+import Button from '../../common/Button';
+import { CURRENCY } from '../../../constants';
 
 const Main: FC = () => {
   const categories = expenseCategories;

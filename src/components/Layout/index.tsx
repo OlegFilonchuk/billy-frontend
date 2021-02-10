@@ -8,13 +8,18 @@ import {
 } from 'react-icons/all';
 import { useTranslation } from 'react-i18next';
 import { IconContext } from 'react-icons';
+import { Link } from 'react-router-dom';
 import TopPanel from './TopPanel';
 import Drawer from '../common/Drawer';
 import Backdrop from '../common/Backdrop';
-import { TRANSITION_DURATION } from '../../constants';
+import { ROUTES, TRANSITION_DURATION } from '../../constants';
 import Button from '../common/Button';
 
-const Layout: FC = ({ children }) => {
+type Props = {
+  withBack?: boolean;
+};
+
+const Layout: FC<Props> = ({ withBack, children }) => {
   const [rangesOpen, setRangesOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [blocked, setBlocked] = useState(false);
@@ -50,6 +55,7 @@ const Layout: FC = ({ children }) => {
       <TopPanel
         onRangesToggle={toggleRangesOpen}
         onMenuToggle={toggleMenuOpen}
+        withBack={withBack}
       />
 
       <Drawer open={rangesOpen} side="left">
@@ -88,10 +94,12 @@ const Layout: FC = ({ children }) => {
       <Drawer side="right" open={menuOpen}>
         <IconContext.Provider value={{ size: '32', className: 'text-accent' }}>
           <div className="flex flex-col items-center justify-start">
-            <Button column fullWidth>
-              <RiBookletLine />
-              <span className="py-2">{t('Categories')}</span>
-            </Button>
+            <Link to={ROUTES.categories}>
+              <Button column fullWidth onClick={() => closeMenu()}>
+                <RiBookletLine />
+                <span className="py-2">{t('Categories')}</span>
+              </Button>
+            </Link>
 
             <Button column fullWidth>
               <IoWalletOutline />

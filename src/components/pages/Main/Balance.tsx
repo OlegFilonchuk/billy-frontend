@@ -1,8 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { formatNumber } from '../../utils/numbersHelpers';
-import { positiveBalance as balance } from '../../mocks';
-import { CURRENCY } from '../../constants';
+import { formatNumber } from '../../../utils/numbersHelpers';
+import { positiveBalance as balance } from '../../../mocks';
+import { CURRENCY } from '../../../constants';
 
 const Balance = () => {
   const isPositive = balance > 0;

@@ -1,4 +1,7 @@
-export type OperationType = 'income' | 'expense';
+export enum OpType {
+  income = 'income',
+  expense = 'expense',
+}
 
 export type TWTransitionDuration =
   | 75
@@ -78,7 +81,7 @@ export type Category = {
   id: Id;
   name: string;
   icon: any;
-  type: OperationType;
+  type: OpType;
   createDate: DateString;
   updateDate: DateString;
 };
@@ -97,7 +100,7 @@ export type Category = {
 
 export type Operation = {
   id: Id;
-  type: OperationType;
+  type: OpType;
   value: number;
   category: Id;
   date: DateString;

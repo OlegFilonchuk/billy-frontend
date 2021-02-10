@@ -1,18 +1,23 @@
 import React, { FC, useEffect, useState } from 'react';
 import { RiAddCircleLine } from 'react-icons/all';
 import { useTranslation } from 'react-i18next';
-import { OperationType, TWTransitionDuration } from '../../types';
-import { expenseCategories, incomeCategories } from '../../mocks';
-import Button from '../common/Button';
+import { OpType, TWTransitionDuration } from '../../../types';
+import { expenseCategories, incomeCategories } from '../../../mocks';
+import Button from '../../common/Button';
+
+const categoriesMap = {
+  [OpType.income]: incomeCategories,
+  [OpType.expense]: expenseCategories,
+};
 
 type Props = {
   open: boolean;
-  opType: OperationType;
+  opType: OpType;
 };
 
 const CategoryPicker: FC<Props> = ({ open, opType }) => {
   const transitionDuration: TWTransitionDuration = 150;
-  const categories = opType === 'income' ? incomeCategories : expenseCategories;
+  const categories = categoriesMap[opType];
 
   const [show, setShow] = useState(false);
 

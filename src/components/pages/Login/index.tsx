@@ -2,11 +2,11 @@ import React, { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/all';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/logo_green.png';
-import { ROUTES } from '../../constants';
-import Button from '../common/Button';
-import Input from '../common/Input';
-import LanguageSwitch from '../common/LanguageSwitch';
+import logo from '../../../assets/logo_green.png';
+import { ROUTES } from '../../../constants';
+import Button from '../../common/Button';
+import Input from '../../common/Input';
+import LanguageSwitch from '../../common/LanguageSwitch';
 
 const Login: FC = () => {
   const { t } = useTranslation();

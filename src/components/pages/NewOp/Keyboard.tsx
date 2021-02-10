@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import Button from '../common/Button';
+import Button from '../../common/Button';
 import { ArithmeticOperation } from './index';
 
 enum KeyType {
