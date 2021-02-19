@@ -1,11 +1,13 @@
 import React, { FC, Fragment, useState } from 'react';
-import { OP_TYPE_LIST } from '../../../constants';
-import { OpType } from '../../../types';
+import { useHistory } from 'react-router-dom';
+import { OP_TYPE_LIST, ROUTES } from '../../../constants';
+import { Category, OpType } from '../../../types';
 import Button from '../../common/Button';
 import Divider from '../../common/Divider';
 import CategoryPicker from '../NewOp/CategoryPicker';
 
 const Categories: FC = () => {
+  const history = useHistory();
   const [active, setActive] = useState(OP_TYPE_LIST[0]);
 
   const handleChange = (opType: OpType) => {
@@ -30,7 +32,13 @@ const Categories: FC = () => {
         ))}
       </div>
 
-      <CategoryPicker open opType={active} />
+      <CategoryPicker
+        open
+        opType={active}
+        onClick={(cat: Category) => {
+          history.push(`${ROUTES.categories}/${cat.type}/${cat.id}`);
+        }}
+      />
     </div>
   );
 };

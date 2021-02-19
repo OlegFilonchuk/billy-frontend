@@ -1,4 +1,5 @@
 import { OpType } from './types';
+import { expenseCategories, incomeCategories } from './mocks';
 
 export const TRANSITION_DURATION = 300;
 
@@ -11,6 +12,12 @@ export const ROUTES = {
   login: '/login',
   signup: '/signup',
   categories: '/categories',
+  category: '/category',
 };
 
 export const OP_TYPE_LIST = Object.keys(OpType).map((k) => OpType[k as OpType]);
+
+export const categoriesMap = {
+  [OpType.income]: incomeCategories,
+  [OpType.expense]: expenseCategories,
+};

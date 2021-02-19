@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layout from './components/Layout';
 import Categories from './components/pages/Categories';
+import CategoryPage from './components/pages/Categories/CategoryPage';
 import Login from './components/pages/Login';
 import Main from './components/pages/Main';
 import NewOp from './components/pages/NewOp';
@@ -40,9 +41,15 @@ function App() {
             <Signup />
           </Route>
 
-          <Route path={ROUTES.categories}>
+          <Route path={ROUTES.categories} exact>
             <Layout>
               <Categories />
+            </Layout>
+          </Route>
+
+          <Route path={`${ROUTES.categories}/:type/:id`}>
+            <Layout>
+              <CategoryPage />
             </Layout>
           </Route>
         </Switch>

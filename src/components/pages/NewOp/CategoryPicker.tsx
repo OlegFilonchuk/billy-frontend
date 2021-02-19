@@ -2,20 +2,16 @@ import React, { FC, useEffect, useState } from 'react';
 import { RiAddCircleLine } from 'react-icons/all';
 import { useTranslation } from 'react-i18next';
 import { OpType, TWTransitionDuration } from '../../../types';
-import { expenseCategories, incomeCategories } from '../../../mocks';
 import Button from '../../common/Button';
-
-const categoriesMap = {
-  [OpType.income]: incomeCategories,
-  [OpType.expense]: expenseCategories,
-};
+import { categoriesMap } from '../../../constants';
 
 type Props = {
   open: boolean;
   opType: OpType;
+  onClick: (...args: any) => any;
 };
 
-const CategoryPicker: FC<Props> = ({ open, opType }) => {
+const CategoryPicker: FC<Props> = ({ open, opType, onClick }) => {
   const transitionDuration: TWTransitionDuration = 150;
   const categories = categoriesMap[opType];
 
@@ -43,7 +39,13 @@ const CategoryPicker: FC<Props> = ({ open, opType }) => {
         {categories.map((cat) => {
           const Icon = cat.icon;
           return (
-            <Button key={cat.id} outlined column className="shadow-md">
+            <Button
+              key={cat.id}
+              outlined
+              column
+              className="shadow-md"
+              onClick={() => onClick(cat)}
+            >
               <Icon size={30} />
               {cat.name}
             </Button>

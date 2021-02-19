@@ -195,7 +195,11 @@ const NewOp: FC<Props> = ({ opType }) => {
           </div>
         </div>
 
-        <CategoryPicker open={!keyboardOpen} opType={opType} />
+        <CategoryPicker
+          open={!keyboardOpen}
+          opType={opType}
+          onClick={() => console.log('mock')}
+        />
       </div>
 
       <Keyboard
