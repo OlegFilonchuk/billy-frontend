@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/all';
+import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 import logo from '../../../assets/logo_green.png';
 import { ROUTES } from '../../../constants';

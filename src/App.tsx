@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC, Suspense } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layout from './components/Layout';
 import Categories from './components/pages/Categories';
@@ -10,7 +10,7 @@ import Signup from './components/pages/Signup';
 import { ROUTES } from './constants';
 import { OpType } from './types';
 
-function App() {
+const AppPage: FC = () => {
   return (
     <div className="container p-0">
       <BrowserRouter>
@@ -56,6 +56,12 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
+
+const App: FC = () => (
+  <Suspense fallback={<div>loading...</div>}>
+    <AppPage />
+  </Suspense>
+);
 
 export default App;

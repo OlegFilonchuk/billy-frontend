@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { ImMinus, ImPlus } from 'react-icons/all';
+import { ImMinus, ImPlus } from 'react-icons/im';
 import { useHistory } from 'react-router-dom';
 import Button from '../../common/Button';
 import { OpType } from '../../../types';

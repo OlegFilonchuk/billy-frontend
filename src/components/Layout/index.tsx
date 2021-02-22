@@ -1,11 +1,8 @@
 import React, { FC, useState } from 'react';
-import {
-  BiCalendarEvent,
-  HiOutlineCurrencyDollar,
-  IoSettingsOutline,
-  IoWalletOutline,
-  RiBookletLine,
-} from 'react-icons/all';
+import { BiCalendarEvent } from 'react-icons/bi';
+import { HiOutlineCurrencyDollar } from 'react-icons/hi';
+import { IoSettingsOutline, IoWalletOutline } from 'react-icons/io5';
+import { RiBookletLine } from 'react-icons/ri';
 import { useTranslation } from 'react-i18next';
 import { IconContext } from 'react-icons';
 import { Link } from 'react-router-dom';

@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { IoArrowBackOutline } from 'react-icons/all';
+import { IoArrowBackOutline } from 'react-icons/io5';
 import { useHistory } from 'react-router-dom';
 import Button from './Button';
 

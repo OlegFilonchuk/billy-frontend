@@ -5,12 +5,10 @@ import React, {
   KeyboardEvent,
   ChangeEvent,
 } from 'react';
-import {
-  BiCalendarEvent,
-  FaMoneyBillAlt,
-  FiPenTool,
-  IoBackspaceSharp,
-} from 'react-icons/all';
+import { BiCalendarEvent } from 'react-icons/bi';
+import { FaMoneyBillAlt } from 'react-icons/fa';
+import { FiPenTool } from 'react-icons/fi';
+import { IoBackspaceSharp } from 'react-icons/io5';
 import { useTranslation } from 'react-i18next';
 import { OpType } from '../../../types';
 import { formatDate } from '../../../utils/dateHelpers';

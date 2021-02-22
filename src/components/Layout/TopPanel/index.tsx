@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
-import { BiMenuAltLeft, FiArrowLeft, HiDotsVertical } from 'react-icons/all';
+import { BiMenuAltLeft } from 'react-icons/bi';
+import { HiDotsVertical } from 'react-icons/hi';
 import { useTranslation } from 'react-i18next';
-import { useLocation, useHistory } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { IconContext } from 'react-icons';
 import Button from '../../common/Button';
 import logo from '../../../assets/logo_white.png';

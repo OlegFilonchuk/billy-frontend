@@ -1,21 +1,20 @@
+import { AiOutlinePhone } from 'react-icons/ai';
+import { BiTaxi, BiTrain } from 'react-icons/bi';
+import { BsFillHouseFill } from 'react-icons/bs';
+import { FaCarSide, FaCat, FaCocktail } from 'react-icons/fa';
 import {
-  AiOutlinePhone,
-  BiTaxi,
-  BiTrain,
-  BsFillHouseFill,
-  FaCarSide,
-  FaCat,
-  FaCocktail,
   GiMedicalThermometer,
   GiMoneyStack,
   GiPayMoney,
   GiPresent,
   GiSoap,
+} from 'react-icons/gi';
+import {
   IoBasketballOutline,
   IoFastFoodOutline,
   IoRestaurantOutline,
-  RiCoinsFill,
-} from 'react-icons/all';
+} from 'react-icons/io5';
+import { RiCoinsFill } from 'react-icons/ri';
 import { Category, OpType } from './types';
 
 export const positiveBalance = 12_345;

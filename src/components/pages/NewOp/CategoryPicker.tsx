@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import { RiAddCircleLine } from 'react-icons/all';
+import { RiAddCircleLine } from 'react-icons/ri';
 import { useTranslation } from 'react-i18next';
 import { OpType, TWTransitionDuration } from '../../../types';
 import Button from '../../common/Button';
