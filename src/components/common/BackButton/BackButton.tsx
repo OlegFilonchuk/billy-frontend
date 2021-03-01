@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
+import { useTranslation } from 'react-i18next';
 import { IoArrowBackOutline } from 'react-icons/io5';
 import { useHistory } from 'react-router-dom';
-import Button from './Button';
+import Button from '../Button';
 
 const BackButton: FC = () => {
   const history = useHistory();
@@ -10,8 +11,10 @@ const BackButton: FC = () => {
     history.goBack();
   };
 
+  const { t } = useTranslation();
+
   return (
-    <Button onClick={handleBack}>
+    <Button onClick={handleBack} title={t('Go back')}>
       <IoArrowBackOutline />
     </Button>
   );

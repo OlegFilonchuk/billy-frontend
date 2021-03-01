@@ -1,0 +1,311 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout should render properly 1`] = `
+<div>
+  <div
+    class="h-1 min-h-screen"
+  >
+    <div
+      class="bg-main h-16 w-full text-textLight flex flex-row flex-nowrap items-center justify-between p-2 shadow-sm fixed z-50"
+    >
+      <button
+        class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center    "
+        title="Go back"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="24"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 512 512"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M244 400L100 256l144-144M120 256h292"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="48"
+          />
+        </svg>
+      </button>
+      <button
+        class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center    "
+        title="Select Date Range"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="24"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 11H16V13H4zM4 6H20V8H4zM4 18L11 18 11.235 18 11.235 16 11 16 4 16z"
+          />
+        </svg>
+      </button>
+      <div
+        class="flex-1 h-full"
+      >
+        <img
+          alt="Billy"
+          class="h-6 object-contain"
+          src="logo_white.png"
+        />
+        <div
+          class="text-sm px-1"
+        >
+          All Accounts
+        </div>
+      </div>
+      <button
+        class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center    "
+        title="Menu"
+        type="button"
+      >
+        <svg
+          fill="currentColor"
+          height="24"
+          stroke="currentColor"
+          stroke-width="0"
+          viewBox="0 0 20 20"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
+          />
+        </svg>
+      </button>
+    </div>
+    <aside
+      class="pt-16 transform top-0 left-0 w-52 bg-bg fixed h-full overflow-auto ease-in-out transition-all duration-300 z-40 -translate-x-full"
+    >
+      <div
+        class="p-4"
+      >
+        <div
+          class="flex flex-col items-center justify-start"
+        >
+          <button
+            class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center  w-full border border-main border-accent mb-2"
+            type="button"
+          >
+            Day
+          </button>
+          <button
+            class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center  w-full border border-main border-accent mb-2"
+            type="button"
+          >
+            Week
+          </button>
+          <button
+            class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center  w-full border border-main border-accent mb-2"
+            type="button"
+          >
+            Month
+          </button>
+          <button
+            class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center  w-full border border-main border-accent mb-2"
+            type="button"
+          >
+            Year
+          </button>
+          <button
+            class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center  w-full border border-main border-accent mb-2"
+            type="button"
+          >
+            All
+          </button>
+          <button
+            class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center  w-full border border-main border-accent mb-2"
+            type="button"
+          >
+            Date Range
+          </button>
+          <button
+            class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center  w-full border border-main border-accent mb-2"
+            type="button"
+          >
+            <svg
+              class="text-accent"
+              fill="currentColor"
+              height="24"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M11 12H17V18H11z"
+              />
+              <path
+                d="M19,4h-2V2h-2v2H9V2H7v2H5C3.897,4,3,4.897,3,6v2v12c0,1.103,0.897,2,2,2h14c1.103,0,2-0.897,2-2V8V6 C21,4.897,20.103,4,19,4z M19.001,20H5V8h14L19.001,20z"
+              />
+            </svg>
+            Pick Date
+          </button>
+        </div>
+      </div>
+    </aside>
+    <aside
+      class="pt-16 transform top-0 right-0 w-52 bg-bg fixed h-full overflow-auto ease-in-out transition-all duration-300 z-40 translate-x-full"
+    >
+      <div
+        class="p-4"
+      >
+        <div
+          class="flex flex-col items-center justify-start"
+        >
+          <a
+            href="/categories"
+          >
+            <button
+              class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center flex-col w-full  "
+              type="button"
+            >
+              <svg
+                class="text-accent"
+                fill="currentColor"
+                height="32"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                width="32"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g>
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                  <path
+                    d="M20.005 2C21.107 2 22 2.898 22 3.99v16.02c0 1.099-.893 1.99-1.995 1.99H4v-4H2v-2h2v-3H2v-2h2V8H2V6h2V2h16.005zM8 4H6v16h2V4zm12 0H10v16h10V4z"
+                  />
+                </g>
+              </svg>
+              <span
+                class="py-2"
+              >
+                Categories
+              </span>
+            </button>
+          </a>
+          <button
+            class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center flex-col w-full  "
+            type="button"
+          >
+            <svg
+              class="text-accent"
+              fill="currentColor"
+              height="32"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                fill="none"
+                height="288"
+                rx="48"
+                ry="48"
+                stroke-linejoin="round"
+                stroke-width="32"
+                width="416"
+                x="48"
+                y="144"
+              />
+              <path
+                d="M411.36 144v-30A50 50 0 00352 64.9L88.64 109.85A50 50 0 0048 159v49"
+                fill="none"
+                stroke-linejoin="round"
+                stroke-width="32"
+              />
+              <path
+                d="M368 320a32 32 0 1132-32 32 32 0 01-32 32z"
+              />
+            </svg>
+            <span
+              class="py-2"
+            >
+              Accounts
+            </span>
+          </button>
+          <button
+            class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center flex-col w-full  "
+            type="button"
+          >
+            <svg
+              class="text-accent"
+              fill="none"
+              height="32"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+              />
+            </svg>
+            <span
+              class="py-2"
+            >
+              Currencies
+            </span>
+          </button>
+          <button
+            class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center flex-col w-full  "
+            type="button"
+          >
+            <svg
+              class="text-accent"
+              fill="currentColor"
+              height="32"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              width="32"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M262.29 192.31a64 64 0 1057.4 57.4 64.13 64.13 0 00-57.4-57.4zM416.39 256a154.34 154.34 0 01-1.53 20.79l45.21 35.46a10.81 10.81 0 012.45 13.75l-42.77 74a10.81 10.81 0 01-13.14 4.59l-44.9-18.08a16.11 16.11 0 00-15.17 1.75A164.48 164.48 0 01325 400.8a15.94 15.94 0 00-8.82 12.14l-6.73 47.89a11.08 11.08 0 01-10.68 9.17h-85.54a11.11 11.11 0 01-10.69-8.87l-6.72-47.82a16.07 16.07 0 00-9-12.22 155.3 155.3 0 01-21.46-12.57 16 16 0 00-15.11-1.71l-44.89 18.07a10.81 10.81 0 01-13.14-4.58l-42.77-74a10.8 10.8 0 012.45-13.75l38.21-30a16.05 16.05 0 006-14.08c-.36-4.17-.58-8.33-.58-12.5s.21-8.27.58-12.35a16 16 0 00-6.07-13.94l-38.19-30A10.81 10.81 0 0149.48 186l42.77-74a10.81 10.81 0 0113.14-4.59l44.9 18.08a16.11 16.11 0 0015.17-1.75A164.48 164.48 0 01187 111.2a15.94 15.94 0 008.82-12.14l6.73-47.89A11.08 11.08 0 01213.23 42h85.54a11.11 11.11 0 0110.69 8.87l6.72 47.82a16.07 16.07 0 009 12.22 155.3 155.3 0 0121.46 12.57 16 16 0 0015.11 1.71l44.89-18.07a10.81 10.81 0 0113.14 4.58l42.77 74a10.8 10.8 0 01-2.45 13.75l-38.21 30a16.05 16.05 0 00-6.05 14.08c.33 4.14.55 8.3.55 12.47z"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="32"
+              />
+            </svg>
+            <span
+              class="py-2"
+            >
+              Settings
+            </span>
+          </button>
+        </div>
+      </div>
+    </aside>
+    <main
+      class="h-full pt-16 bg-bg"
+    >
+      test
+    </main>
+    <div
+      class="absolute left-0 right-0 bottom-0 bg-black transition-opacity ease-in-out duration-300 z-10 opacity-0 top-full"
+      role="presentation"
+    />
+  </div>
+</div>
+`;

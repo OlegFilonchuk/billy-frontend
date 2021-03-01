@@ -1,6 +1,6 @@
 import React, { FC, Suspense } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Layout from './components/Layout';
+import Layout from './components/Layout/Layout';
 import Categories from './components/pages/Categories';
 import CategoryPage from './components/pages/Categories/CategoryPage';
 import Login from './components/pages/Login';

@@ -6,7 +6,7 @@ import logo from '../../../assets/logo_green.png';
 import { ROUTES } from '../../../constants';
 import Button from '../../common/Button';
 import Input from '../../common/Input';
-import LanguageSwitch from '../../common/LanguageSwitch';
+import LanguageSwitch from '../../common/LanguageSwitch/LanguageSwitch';
 
 const Signup: FC = () => {
   const { t } = useTranslation();

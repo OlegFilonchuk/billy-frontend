@@ -31,5 +31,8 @@
   "Welcome": "Добро пожаловать",
   "Login": "Авторизоваться",
   "Already have an account?": "Уже есть аккаунт?",
-  "Create an account": "Завести аккаунт"
+  "Create an account": "Завести аккаунт",
+  "Go back": "Назад",
+  "Select Date Range": "Выбрать временной промежуток",
+  "Menu": "Меню"
 }

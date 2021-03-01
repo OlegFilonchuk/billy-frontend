@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer in the closed state should render properly 1`] = `
+<div>
+  <aside
+    class="pt-16 transform top-0 left-0 w-52 bg-bg fixed h-full overflow-auto ease-in-out transition-all duration-300 z-40 -translate-x-full"
+  >
+    <div
+      class="p-4"
+    />
+  </aside>
+</div>
+`;
+
+exports[`Drawer in the open state should render properly 1`] = `
+<div>
+  <aside
+    class="pt-16 transform top-0 left-0 w-52 bg-bg fixed h-full overflow-auto ease-in-out transition-all duration-300 z-40 translate-x-0"
+  >
+    <div
+      class="p-4"
+    />
+  </aside>
+</div>
+`;

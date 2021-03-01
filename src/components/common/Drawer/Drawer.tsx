@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import { TWTransitionDuration } from '../../types';
-import { TRANSITION_DURATION } from '../../constants';
+import { TWTransitionDuration } from '../../../types';
+import { TRANSITION_DURATION } from '../../../constants';
 
 type Props = {
   side: 'left' | 'right';

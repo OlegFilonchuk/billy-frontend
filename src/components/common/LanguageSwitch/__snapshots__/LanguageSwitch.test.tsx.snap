@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BackButton should render properly 1`] = `
+<div>
+  <div
+    class="flex"
+  >
+    <button
+      class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center    "
+      type="button"
+    >
+      ru
+    </button>
+    <div
+      class="w-px h-full bg-black"
+    />
+    <button
+      class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center    "
+      disabled=""
+      type="button"
+    >
+      en
+    </button>
+  </div>
+</div>
+`;

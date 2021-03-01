@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Backdrop in closed state should should render properly 1`] = `
+<div>
+  <div
+    class="absolute left-0 right-0 bottom-0 bg-black transition-opacity ease-in-out duration-300 z-10 opacity-0 top-full"
+    role="presentation"
+  />
+</div>
+`;
+
+exports[`Backdrop in open state should should render properly 1`] = `
+<div>
+  <div
+    class="absolute left-0 right-0 bottom-0 bg-black transition-opacity ease-in-out duration-300 z-10 opacity-50 top-0"
+    role="presentation"
+  />
+</div>
+`;

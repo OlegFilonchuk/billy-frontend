@@ -6,9 +6,9 @@ import { RiBookletLine } from 'react-icons/ri';
 import { useTranslation } from 'react-i18next';
 import { IconContext } from 'react-icons';
 import { Link } from 'react-router-dom';
-import TopPanel from './TopPanel';
-import Drawer from '../common/Drawer';
-import Backdrop from '../common/Backdrop';
+import TopPanel from './TopPanel/TopPanel';
+import Drawer from '../common/Drawer/Drawer';
+import Backdrop from '../common/Backdrop/Backdrop';
 import { ROUTES, TRANSITION_DURATION } from '../../constants';
 import Button from '../common/Button';
 

@@ -7,7 +7,7 @@ import { IconContext } from 'react-icons';
 import Button from '../../common/Button';
 import logo from '../../../assets/logo_white.png';
 import { ROUTES } from '../../../constants';
-import BackButton from '../../common/BackButton';
+import BackButton from '../../common/BackButton/BackButton';
 
 type Props = {
   onRangesToggle: () => void;
@@ -31,7 +31,7 @@ const TopPanel: FC<Props> = ({
 
         {location.pathname === ROUTES.root && (
           <>
-            <Button onClick={onRangesToggle}>
+            <Button onClick={onRangesToggle} title={t('Select Date Range')}>
               <BiMenuAltLeft />
             </Button>
 
@@ -40,7 +40,7 @@ const TopPanel: FC<Props> = ({
               <div className="text-sm px-1">{t('All Accounts')}</div>
             </div>
 
-            <Button onClick={onMenuToggle}>
+            <Button onClick={onMenuToggle} title={t('Menu')}>
               <HiDotsVertical />
             </Button>
           </>

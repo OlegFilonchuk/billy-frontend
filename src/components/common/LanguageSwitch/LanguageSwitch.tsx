@@ -1,7 +1,7 @@
 import React, { FC, Fragment } from 'react';
 import { useTranslation } from 'react-i18next';
-import Button from './Button';
-import Divider from './Divider';
+import Button from '../Button';
+import Divider from '../Divider';
 
 const LanguageSwitch: FC = () => {
   const { i18n } = useTranslation();
