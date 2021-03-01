@@ -1,22 +1,20 @@
-import React, { FC, HTMLProps } from 'react';
+import React, { FC } from 'react';
+import { Link, LinkProps } from 'react-router-dom';
 import { ButtonProps } from '../../types';
 
-type Props = HTMLProps<HTMLButtonElement> & ButtonProps;
+type Props = LinkProps & ButtonProps;
 
-const Button: FC<Props> = ({
-  type = 'button',
-  column = false,
-  outlined = false,
-  className,
+const ButtonLink: FC<Props> = ({
   fullWidth,
+  outlined,
+  column,
+  className,
   children,
-  ...rest
+  ...props
 }) => {
   return (
-    <button
-      // eslint-disable-next-line react/button-has-type
-      type={type}
-      {...rest}
+    <Link
+      {...props}
       className={`transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center ${
         column ? 'flex-col' : ''
       } ${fullWidth ? 'w-full' : ''} ${outlined ? 'border border-main' : ''} ${
@@ -24,8 +22,8 @@ const Button: FC<Props> = ({
       }`}
     >
       {children}
-    </button>
+    </Link>
   );
 };
 
-export default Button;
+export default ButtonLink;

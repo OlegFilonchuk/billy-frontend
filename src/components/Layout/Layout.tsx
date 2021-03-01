@@ -5,12 +5,12 @@ import { IoSettingsOutline, IoWalletOutline } from 'react-icons/io5';
 import { RiBookletLine } from 'react-icons/ri';
 import { useTranslation } from 'react-i18next';
 import { IconContext } from 'react-icons';
-import { Link } from 'react-router-dom';
 import TopPanel from './TopPanel/TopPanel';
 import Drawer from '../common/Drawer/Drawer';
 import Backdrop from '../common/Backdrop/Backdrop';
 import { ROUTES, TRANSITION_DURATION } from '../../constants';
 import Button from '../common/Button';
+import ButtonLink from '../common/ButtonLink';
 
 type Props = {
   withBack?: boolean;
@@ -91,12 +91,15 @@ const Layout: FC<Props> = ({ withBack, children }) => {
       <Drawer side="right" open={menuOpen}>
         <IconContext.Provider value={{ size: '32', className: 'text-accent' }}>
           <div className="flex flex-col items-center justify-start">
-            <Link to={ROUTES.categories}>
-              <Button column fullWidth onClick={() => closeMenu()}>
-                <RiBookletLine />
-                <span className="py-2">{t('Categories')}</span>
-              </Button>
-            </Link>
+            <ButtonLink
+              to={ROUTES.categories}
+              column
+              fullWidth
+              onClick={closeMenu}
+            >
+              <RiBookletLine />
+              <span className="py-2">{t('Categories')}</span>
+            </ButtonLink>
 
             <Button column fullWidth>
               <IoWalletOutline />

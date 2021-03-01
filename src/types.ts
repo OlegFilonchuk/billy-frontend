@@ -154,3 +154,10 @@ export type Debt = {
   updateDate: DateString;
   note?: string;
 };
+
+export type ButtonProps = {
+  column?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+  fullWidth?: boolean;
+  outlined?: boolean;
+};
