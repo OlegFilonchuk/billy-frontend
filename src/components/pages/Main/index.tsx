@@ -1,13 +1,31 @@
 import React, { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useQuery } from 'react-query';
 import CreateOpPanel from './CreateOpPanel';
 import Balance from './Balance';
-import { expenseCategories, weeklyExpense, weeklyIncome } from '../../../mocks';
 import Button from '../../common/Button';
-import { CURRENCY } from '../../../constants';
+import { CURRENCY, QUERY_KEYS } from '../../../constants';
+import {
+  fetchExpenseCategories,
+  fetchWeeklyExpense,
+  fetchWeeklyIncome,
+} from '../../../api/apiController';
+import { OpType } from '../../../types';
 
 const Main: FC = () => {
-  const categories = expenseCategories;
+  const { data: expenseCategories } = useQuery(
+    ['categories', OpType.expense],
+    fetchExpenseCategories,
+  );
+  const { data: weeklyIncome } = useQuery(
+    QUERY_KEYS.weeklyIncome,
+    fetchWeeklyIncome,
+  );
+  const { data: weeklyExpense } = useQuery(
+    QUERY_KEYS.weeklyExpense,
+    fetchWeeklyExpense,
+  );
+
   const { t } = useTranslation();
 
   return (
@@ -15,7 +33,7 @@ const Main: FC = () => {
       <div className="text-center text-main">week</div>
 
       <div className="flex-1 grid grid-cols-mainScreen grid-rows-5">
-        {categories.map((cat) => {
+        {expenseCategories?.map((cat) => {
           const Icon = cat.icon;
           return (
             <div key={cat.id} className="flex justify-center items-center">

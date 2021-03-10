@@ -1,9 +1,10 @@
 import React, { FC, useEffect, useState } from 'react';
 import { RiAddCircleLine } from 'react-icons/ri';
 import { useTranslation } from 'react-i18next';
+import { useQuery } from 'react-query';
 import { OpType, TWTransitionDuration } from '../../../types';
 import Button from '../../common/Button';
-import { categoriesMap } from '../../../constants';
+import { categoriesMap, QUERY_KEYS } from '../../../constants';
 
 type Props = {
   open: boolean;
@@ -13,7 +14,11 @@ type Props = {
 
 const CategoryPicker: FC<Props> = ({ open, opType, onClick }) => {
   const transitionDuration: TWTransitionDuration = 150;
-  const categories = categoriesMap[opType];
+
+  const { data: categories } = useQuery(
+    [QUERY_KEYS.categories, opType],
+    categoriesMap[opType],
+  );
 
   const [show, setShow] = useState(false);
 
@@ -36,7 +41,7 @@ const CategoryPicker: FC<Props> = ({ open, opType, onClick }) => {
       } ${show ? '' : 'invisible'}`}
     >
       <div className="grid grid-cols-3 gap-1">
-        {categories.map((cat) => {
+        {categories?.map((cat) => {
           const Icon = cat.icon;
           return (
             <Button

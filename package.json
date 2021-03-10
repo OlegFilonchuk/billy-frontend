@@ -22,6 +22,7 @@
     "react-dom": "^17.0.1",
     "react-i18next": "^11.8.5",
     "react-icons": "^4.1.0",
+    "react-query": "^3.12.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "tailwind-caret-color": "^1.1.0",

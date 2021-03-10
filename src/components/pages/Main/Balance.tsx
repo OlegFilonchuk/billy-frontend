@@ -1,13 +1,17 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useQuery } from 'react-query';
 import { formatNumber } from '../../../utils/numbersHelpers';
-import { positiveBalance as balance } from '../../../mocks';
-import { CURRENCY } from '../../../constants';
+import { CURRENCY, QUERY_KEYS } from '../../../constants';
+import { fetchBalance } from '../../../api/apiController';
 
 const Balance = () => {
-  const isPositive = balance > 0;
-
   const { t } = useTranslation();
+  const { data: balance } = useQuery(QUERY_KEYS.balance, fetchBalance);
+
+  if (!balance) return null;
+
+  const isPositive = balance > 0;
 
   return (
     <div

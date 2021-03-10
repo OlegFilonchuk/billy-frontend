@@ -1,34 +1,26 @@
 import React, { ChangeEvent, FC, useRef, useState } from 'react';
+import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
-import { categoriesMap } from '../../../constants';
+import { categoriesMap, QUERY_KEYS } from '../../../constants';
 import { OpType } from '../../../types';
+import CategoryName from './CategoryName';
 
 const CategoryPage: FC = () => {
   const { id, type } = useParams<{ id: string; type: OpType }>();
-  const categories = categoriesMap[type];
-  const category = categories.find((cat) => cat.id === id);
 
-  const ref = useRef<HTMLInputElement>(null);
+  const { data: categories } = useQuery(
+    [QUERY_KEYS.categories, type],
+    categoriesMap[type],
+    {
+      enabled: type !== undefined,
+    },
+  );
 
-  const [name, setName] = useState(category?.name);
-
-  const handleNameChange = (ev: ChangeEvent<HTMLInputElement>) => {
-    setName(ev.target.value);
-  };
+  const category = categories?.find((cat) => cat.id === id);
 
   return (
     <div className="flex flex-col p-4">
-      <div className="shadow-inner text-textLight rounded-sm p-1 flex items-center justify-center h-16 transition-all duration-300 bg-main">
-        <input
-          ref={ref}
-          // placeholder
-          // label
-          // onFocus={() => ref.current?.select()}
-          value={name}
-          onChange={handleNameChange}
-          className="input text-4xl w-60 bg-transparent text-center caret-transparent outline-none"
-        />
-      </div>
+      {category?.name && <CategoryName name={category.name} />}
     </div>
   );
 };

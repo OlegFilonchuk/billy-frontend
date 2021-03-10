@@ -72,8 +72,8 @@ export type ProfileData = {
 };
 
 /**
- * endpoints: '/operations/categories/incomes',
- *            '/operations/categories/expenses',
+ * endpoints: '/operations/categories/income',
+ *            '/operations/categories/expense',
  * method: 'GET', 'PATCH', 'DELETE', 'POST'
  */
 

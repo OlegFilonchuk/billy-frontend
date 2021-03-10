@@ -1,9 +1,12 @@
 import { OpType } from './types';
-import { expenseCategories, incomeCategories } from './mocks';
+import {
+  fetchIncomeCategories,
+  fetchExpenseCategories,
+} from './api/apiController';
 
 export const TRANSITION_DURATION = 300;
 
-export const CURRENCY = 'HRN';
+export const CURRENCY = 'UAH';
 
 export const ROUTES = {
   root: '/',
@@ -15,9 +18,16 @@ export const ROUTES = {
   category: '/category',
 };
 
+export const QUERY_KEYS = {
+  categories: 'categories',
+  balance: 'balance',
+  weeklyIncome: 'weeklyIncome',
+  weeklyExpense: 'weeklyExpense',
+};
+
 export const OP_TYPE_LIST = Object.keys(OpType).map((k) => OpType[k as OpType]);
 
 export const categoriesMap = {
-  [OpType.income]: incomeCategories,
-  [OpType.expense]: expenseCategories,
+  [OpType.income]: fetchIncomeCategories,
+  [OpType.expense]: fetchExpenseCategories,
 };
