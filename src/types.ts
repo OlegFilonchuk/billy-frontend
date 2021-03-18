@@ -155,7 +155,7 @@ export type Debt = {
   note?: string;
 };
 
-export type ButtonProps = {
+export type ButtonComponentProps = {
   column?: boolean;
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
