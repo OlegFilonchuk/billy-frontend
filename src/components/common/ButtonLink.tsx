@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 import { ButtonComponentProps } from '../../types';
 
-type Props = LinkProps & ButtonComponentProps;
+export type ButtonLinkProps = LinkProps & ButtonComponentProps;
 
-const ButtonLink: FC<Props> = ({
+const ButtonLink: FC<ButtonLinkProps> = ({
   fullWidth,
   outlined,
   column,
