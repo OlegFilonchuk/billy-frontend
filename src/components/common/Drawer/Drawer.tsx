@@ -2,13 +2,13 @@ import React, { FC } from 'react';
 import { TWTransitionDuration } from '../../../types';
 import { TRANSITION_DURATION } from '../../../constants';
 
-type Props = {
+export type DrawerProps = {
   side: 'left' | 'right';
   open: boolean;
   transitionDuration?: TWTransitionDuration;
 };
 
-const Drawer: FC<Props> = ({
+const Drawer: FC<DrawerProps> = ({
   side,
   open,
   children,

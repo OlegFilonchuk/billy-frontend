@@ -15,11 +15,23 @@ const VerticalTemplate: Story<DividerProps> = (args) => (
       height: '2em',
     }}
   >
-    <span>one</span>
+    <span
+      style={{
+        margin: 6,
+      }}
+    >
+      one
+    </span>
 
     <Divider {...args} />
 
-    <span>one</span>
+    <span
+      style={{
+        margin: 6,
+      }}
+    >
+      one
+    </span>
   </div>
 );
 
