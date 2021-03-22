@@ -1,7 +1,9 @@
 version: 2.1
+
 orbs:
   node: circleci/node@1.1
   jira: circleci/jira@1.3.1
+
 jobs:
   build:
     executor:
@@ -12,7 +14,16 @@ jobs:
       - node/with-cache:
           steps:
             - run: yarn install
-      - run: yarn test
+      - run:
+          name: test
+          command: yarn test
+      - run:
+          name: bundlesize
+          command: yarn size
+      - run:
+          name: build
+          command: yarn build
+
 workflows:
   build:
     jobs:
