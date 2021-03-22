@@ -18,11 +18,13 @@ jobs:
           name: test
           command: yarn test
       - run:
-          name: bundlesize
-          command: yarn size
-      - run:
           name: build
           command: yarn build
+      - store_artifacts:
+          path: /build
+      - run:
+          name: bundlesize
+          command: yarn size
 
 workflows:
   build:
