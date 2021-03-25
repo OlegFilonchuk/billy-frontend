@@ -2,7 +2,7 @@ import React, { FC, Suspense } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-// import Layout from './components/Layout/Layout';
+import Layout from './components/Layout/Layout';
 // import Categories from './components/pages/Categories';
 // import CategoryPage from './components/pages/Categories/CategoryPage';
 // import Login from './components/pages/Login';
@@ -21,10 +21,10 @@ const AppPage: FC = () => {
         <BrowserRouter>
           <Switch>
             <Route path="/" exact>
-              test
-              {/* <Layout withBack={false}>
-                <Main />
-              </Layout> */}
+              <Layout withBack={false}>
+                test
+                {/* <Main /> */}
+              </Layout>
             </Route>
 
             {/* <Route path={ROUTES.income} exact>
