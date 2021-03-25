@@ -5,26 +5,32 @@ import CreateOpPanel from './CreateOpPanel';
 import Balance from './Balance';
 import Button from '../../common/Button';
 import { CURRENCY, QUERY_KEYS } from '../../../constants';
-import {
-  fetchExpenseCategories,
-  fetchWeeklyExpense,
-  fetchWeeklyIncome,
-} from '../../../api/apiController';
-import { OpType } from '../../../types';
+// import {
+//   fetchExpenseCategories,
+//   fetchWeeklyExpense,
+//   fetchWeeklyIncome,
+// } from '../../../api/apiController';
+import { Category, OpType } from '../../../types';
 
 const Main: FC = () => {
-  const { data: expenseCategories } = useQuery(
-    ['categories', OpType.expense],
-    fetchExpenseCategories,
-  );
-  const { data: weeklyIncome } = useQuery(
-    QUERY_KEYS.weeklyIncome,
-    fetchWeeklyIncome,
-  );
-  const { data: weeklyExpense } = useQuery(
-    QUERY_KEYS.weeklyExpense,
-    fetchWeeklyExpense,
-  );
+  // const { data: expenseCategories } = useQuery(
+  //   ['categories', OpType.expense],
+  //   fetchExpenseCategories,
+  // );
+  // const { data: weeklyIncome } = useQuery(
+  //   QUERY_KEYS.weeklyIncome,
+  //   fetchWeeklyIncome,
+  // );
+  // const { data: weeklyExpense } = useQuery(
+  //   QUERY_KEYS.weeklyExpense,
+  //   fetchWeeklyExpense,
+  // );
+
+  const [expenseCategories, weeklyIncome, weeklyExpense] = [
+    [] as Category[],
+    2342,
+    231,
+  ];
 
   const { t } = useTranslation();
 

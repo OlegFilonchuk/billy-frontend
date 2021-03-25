@@ -2,9 +2,9 @@ import React, { FC, useEffect, useState } from 'react';
 import { RiAddCircleLine } from 'react-icons/ri';
 import { useTranslation } from 'react-i18next';
 import { useQuery } from 'react-query';
-import { OpType, TWTransitionDuration } from '../../../types';
+import { Category, OpType, TWTransitionDuration } from '../../../types';
 import Button from '../../common/Button';
-import { categoriesMap, QUERY_KEYS } from '../../../constants';
+// import { categoriesMap, QUERY_KEYS } from '../../../constants';
 
 type Props = {
   open: boolean;
@@ -15,10 +15,12 @@ type Props = {
 const CategoryPicker: FC<Props> = ({ open, opType, onClick }) => {
   const transitionDuration: TWTransitionDuration = 150;
 
-  const { data: categories } = useQuery(
-    [QUERY_KEYS.categories, opType],
-    categoriesMap[opType],
-  );
+  // const { data: categories } = useQuery(
+  //   [QUERY_KEYS.categories, opType],
+  //   categoriesMap[opType],
+  // );
+
+  const categories = [] as Category[];
 
   const [show, setShow] = useState(false);
 
