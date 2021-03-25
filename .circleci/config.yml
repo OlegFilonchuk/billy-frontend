@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       # - node/with-cache:
-      - run: yarn install --frozen-lockfilse
+      - run: yarn install --frozen-lockfile
           # steps:
       - run:
           name: test
