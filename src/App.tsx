@@ -17,7 +17,7 @@ const queryClient = new QueryClient();
 const AppPage: FC = () => {
   return (
     <div className="container p-0">
-      <QueryClientProvider client={queryClient}>
+      {/* <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Switch>
             <Route path="/" exact>
@@ -61,7 +61,8 @@ const AppPage: FC = () => {
         </BrowserRouter>
 
         <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
+      </QueryClientProvider> */}
+      test
     </div>
   );
 };
