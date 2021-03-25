@@ -1,4 +1,4 @@
-import React, { FC, Suspense } from 'react';
+import React, { FC } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
@@ -67,10 +67,9 @@ const AppPage: FC = () => {
 };
 
 const App: FC = () => (
-  <Suspense fallback={<div>loading...</div>}>
-    test
-    {/* <AppPage /> */}
-  </Suspense>
+  // <Suspense fallback={<div>loading...</div>}>
+  <AppPage />
+  // </Suspense>
 );
 
 export default App;
