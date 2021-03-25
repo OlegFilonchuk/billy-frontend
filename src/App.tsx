@@ -1,12 +1,12 @@
 import React, { FC, Suspense } from 'react';
-import { BrowserRouter, /* Route, */ Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
-// import Layout from './components/Layout/Layout';
+import Layout from './components/Layout/Layout';
 // import Categories from './components/pages/Categories';
 // import CategoryPage from './components/pages/Categories/CategoryPage';
 // import Login from './components/pages/Login';
-// import Main from './components/pages/Main';
+import Main from './components/pages/Main';
 // import NewOp from './components/pages/NewOp';
 // import Signup from './components/pages/Signup';
 // import { ROUTES } from './constants';
@@ -20,13 +20,13 @@ const AppPage: FC = () => {
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Switch>
-            {/* <Route path="/" exact>
+            <Route path="/" exact>
               <Layout withBack={false}>
                 <Main />
               </Layout>
             </Route>
 
-            <Route path={ROUTES.income} exact>
+            {/* <Route path={ROUTES.income} exact>
               <Layout>
                 <NewOp opType={OpType.income} />
               </Layout>
@@ -57,7 +57,6 @@ const AppPage: FC = () => {
                 <CategoryPage />
               </Layout>
             </Route> */}
-            test
           </Switch>
         </BrowserRouter>
 
