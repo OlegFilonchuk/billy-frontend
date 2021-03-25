@@ -20,7 +20,7 @@ jobs:
           name: build
           command: yarn build
       - store_artifacts:
-          path: /build
+          path: build
       - run:
           name: bundlesize
           command: yarn size

@@ -68,7 +68,8 @@ const AppPage: FC = () => {
 
 const App: FC = () => (
   <Suspense fallback={<div>loading...</div>}>
-    <AppPage />
+    test
+    {/* <AppPage /> */}
   </Suspense>
 );
 

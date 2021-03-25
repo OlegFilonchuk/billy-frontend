@@ -16,7 +16,6 @@ describe('Layout', () => {
   });
 
   it('should render properly', () => {
-    ui.debug();
     expect(ui.container).toMatchSnapshot();
   });
 });
