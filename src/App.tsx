@@ -3,14 +3,14 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import Layout from './components/Layout/Layout';
-// import Categories from './components/pages/Categories';
-// import CategoryPage from './components/pages/Categories/CategoryPage';
-// import Login from './components/pages/Login';
-// import Main from './components/pages/Main';
-// import NewOp from './components/pages/NewOp';
-// import Signup from './components/pages/Signup';
-// import { ROUTES } from './constants';
-// import { OpType } from './types';
+import Categories from './components/pages/Categories';
+import CategoryPage from './components/pages/Categories/CategoryPage';
+import Login from './components/pages/Login';
+import Main from './components/pages/Main';
+import NewOp from './components/pages/NewOp';
+import Signup from './components/pages/Signup';
+import { ROUTES } from './constants';
+import { OpType } from './types';
 
 const queryClient = new QueryClient();
 
@@ -22,12 +22,12 @@ const AppPage: FC = () => {
           <Switch>
             <Route path="/" exact>
               <Layout withBack={false}>
-                {/* <Main /> */}
+                <Main />
                 test
               </Layout>
             </Route>
 
-            {/* <Route path={ROUTES.income} exact>
+            <Route path={ROUTES.income} exact>
               <Layout>
                 <NewOp opType={OpType.income} />
               </Layout>
@@ -57,7 +57,7 @@ const AppPage: FC = () => {
               <Layout>
                 <CategoryPage />
               </Layout>
-            </Route> */}
+            </Route>
           </Switch>
         </BrowserRouter>
 

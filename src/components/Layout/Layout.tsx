@@ -3,7 +3,7 @@ import { BiCalendarEvent } from 'react-icons/bi';
 import { HiOutlineCurrencyDollar } from 'react-icons/hi';
 import { IoSettingsOutline, IoWalletOutline } from 'react-icons/io5';
 import { RiBookletLine } from 'react-icons/ri';
-// import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { IconContext } from 'react-icons';
 import TopPanel from './TopPanel/TopPanel';
 import Drawer from '../common/Drawer/Drawer';
@@ -22,8 +22,7 @@ const Layout: FC<Props> = ({ withBack, children }) => {
   const [blocked, setBlocked] = useState(false);
   const transitionDuration = TRANSITION_DURATION;
 
-  // const { t } = useTranslation();
-  const t = (str: string) => str;
+  const { t } = useTranslation();
 
   const toggleRangesOpen = () => {
     if (blocked) return;
