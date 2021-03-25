@@ -10,9 +10,9 @@ jobs:
       tag: '14.16'
     steps:
       - checkout
-      # - node/with-cache:
-      - run: yarn install --frozen-lockfile
-          # steps:
+      - node/with-cache:
+          steps:
+            - run: yarn install --frozen-lockfile
       - run:
           name: test
           command: yarn test
