@@ -16,7 +16,7 @@ const Signup: FC = () => {
   const [pass, setPass] = useState('');
   const [repeatPass, setRepeatPass] = useState('');
 
-  const match = pass === repeatPass;
+  // const match = pass === repeatPass;
 
   return (
     <div className="bg-bg h-screen">

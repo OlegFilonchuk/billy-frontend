@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, useRef, useState } from 'react';
+import React, { FC } from 'react';
 import { useQuery } from 'react-query';
 import { useParams } from 'react-router-dom';
 import { categoriesMap, QUERY_KEYS } from '../../../constants';
