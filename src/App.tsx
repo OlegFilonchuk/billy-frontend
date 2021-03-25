@@ -6,7 +6,7 @@ import Layout from './components/Layout/Layout';
 // import Categories from './components/pages/Categories';
 // import CategoryPage from './components/pages/Categories/CategoryPage';
 // import Login from './components/pages/Login';
-import Main from './components/pages/Main';
+// import Main from './components/pages/Main';
 // import NewOp from './components/pages/NewOp';
 // import Signup from './components/pages/Signup';
 // import { ROUTES } from './constants';
@@ -22,7 +22,8 @@ const AppPage: FC = () => {
           <Switch>
             <Route path="/" exact>
               <Layout withBack={false}>
-                <Main />
+                {/* <Main /> */}
+                test
               </Layout>
             </Route>
 
