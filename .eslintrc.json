@@ -60,6 +60,7 @@
     "global-require": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "error",
-    "radix": [2, "as-needed"]
+    "radix": [2, "as-needed"],
+    "@typescript-eslint/no-explicit-any": "off"
   }
 }

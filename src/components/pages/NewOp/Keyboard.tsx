@@ -66,6 +66,7 @@ const Keyboard: FC<KeyboardProps> = ({
     [KeyType.Operation]: handleOperation,
     [KeyType.Equals]: handleEquals,
     [KeyType.Dot]: () => {
+      // eslint-disable-next-line no-console
       console.log('dot');
     },
   };

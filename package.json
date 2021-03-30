@@ -51,8 +51,15 @@
     "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
     "postinstall": "husky install",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "size": "bundlesize"
   },
+  "bundlesize": [
+    {
+      "path": "build/**/*.chunk.js",
+      "maxSize": "100 kB"
+    }
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -80,6 +87,7 @@
     "@storybook/react": "^6.1.21",
     "@typescript-eslint/eslint-plugin": "^4.12.0",
     "@typescript-eslint/parser": "^4.12.0",
+    "bundlesize": "^0.18.1",
     "eslint": "^7.2.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^7.1.0",

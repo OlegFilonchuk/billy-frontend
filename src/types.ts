@@ -1,3 +1,5 @@
+import { IconType } from 'react-icons';
+
 export enum OpType {
   income = 'income',
   expense = 'expense',
@@ -80,7 +82,7 @@ export type ProfileData = {
 export type Category = {
   id: Id;
   name: string;
-  icon: any;
+  icon: IconType;
   type: OpType;
   createDate: DateString;
   updateDate: DateString;
