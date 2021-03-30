@@ -24,3 +24,9 @@ jobs:
       - run:
           name: bundlesize
           command: yarn size
+      - run:
+          name: install lighthouse-cli
+          command: sudo npm install -g @lhci/cli@0.7.x
+      - run:
+          name: lighthouse
+          command: lhci autorun
