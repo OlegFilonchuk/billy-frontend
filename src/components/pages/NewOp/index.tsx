@@ -36,6 +36,7 @@ const NewOp: FC<Props> = ({ opType }) => {
   const { t } = useTranslation();
 
   const keydownHandler = (ev: KeyboardEvent<HTMLDivElement>) => {
+    // eslint-disable-next-line no-console
     console.log(ev);
   };
 
@@ -196,7 +197,10 @@ const NewOp: FC<Props> = ({ opType }) => {
         <CategoryPicker
           open={!keyboardOpen}
           opType={opType}
-          onClick={() => console.log('mock')}
+          onClick={() => {
+            // eslint-disable-next-line no-console
+            console.log('mock');
+          }}
         />
       </div>
 

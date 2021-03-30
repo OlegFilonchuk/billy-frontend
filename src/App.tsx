@@ -23,6 +23,7 @@ const AppPage: FC = () => {
             <Route path="/" exact>
               <Layout withBack={false}>
                 <Main />
+                test
               </Layout>
             </Route>
 
