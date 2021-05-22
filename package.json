@@ -52,7 +52,8 @@
     "postinstall": "husky install",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "size": "bundlesize"
+    "size": "bundlesize",
+    "deploy-production": "react-scripts build && scp -r ./build/* root@164.90.164.204:/var/www/billy.pp.ua/html"
   },
   "bundlesize": [
     {
