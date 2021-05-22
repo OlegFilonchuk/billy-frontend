@@ -1,9 +1,9 @@
 import React, { FC, HTMLProps } from 'react';
-import { ButtonProps } from '../../types';
+import { ButtonComponentProps } from '../../types';
 
-type Props = HTMLProps<HTMLButtonElement> & ButtonProps;
+export type ButtonProps = HTMLProps<HTMLButtonElement> & ButtonComponentProps;
 
-const Button: FC<Props> = ({
+const Button: FC<ButtonProps> = ({
   type = 'button',
   column = false,
   outlined = false,
