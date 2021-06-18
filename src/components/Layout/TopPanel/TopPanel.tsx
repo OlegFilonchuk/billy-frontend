@@ -25,7 +25,7 @@ const TopPanel: FC<Props> = ({
   const location = useLocation();
 
   return (
-    <div className="bg-main h-16 w-full text-textLight flex flex-row flex-nowrap items-center justify-between p-2 shadow-sm fixed z-50">
+    <div className="bg-main h-16 inset-x-0 text-textLight flex flex-row flex-nowrap items-center justify-between p-2 shadow-sm fixed z-50">
       <IconContext.Provider value={{ size: '24' }}>
         {withBack && <BackButton />}
 

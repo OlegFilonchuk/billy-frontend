@@ -3,7 +3,7 @@
 exports[`TopPanel with "withBack" prop set to true or unset should render properly 1`] = `
 <div>
   <div
-    class="bg-main h-16 w-full text-textLight flex flex-row flex-nowrap items-center justify-between p-2 shadow-sm fixed z-50"
+    class="bg-main h-16 inset-x-0 text-textLight flex flex-row flex-nowrap items-center justify-between p-2 shadow-sm fixed z-50"
   >
     <button
       class="transition duration-150 hover:shadow-lg focus:shadow-lg focus:ring ring-accent disabled:opacity-50 p-2 rounded inline-flex justify-center items-center    "
