@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { ImMinus, ImPlus } from 'react-icons/im';
 import { useHistory } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Button from '../../common/Button';
 import { OpType } from '../../../types';
 import { ROUTES } from '../../../constants';
@@ -13,6 +14,8 @@ const routesMap = {
 const CreateOpPanel: FC = () => {
   const history = useHistory();
 
+  const { t } = useTranslation();
+
   const handleCreateOperation = (opType: OpType) => {
     history.push(routesMap[opType]);
   };
@@ -21,6 +24,7 @@ const CreateOpPanel: FC = () => {
     <div className="p-4">
       <div className="flex justify-around p-2">
         <Button
+          title={t('Create new expense')}
           className="p-8 border-8 rounded-full border-error"
           onClick={() => handleCreateOperation(OpType.expense)}
         >
@@ -28,6 +32,7 @@ const CreateOpPanel: FC = () => {
         </Button>
 
         <Button
+          title="Create new income"
           className="p-8 border-8 rounded-full border-main"
           onClick={() => handleCreateOperation(OpType.income)}
         >
