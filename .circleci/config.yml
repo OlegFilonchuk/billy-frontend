@@ -19,11 +19,8 @@ jobs:
           command: yarn coverage
       - store_artifacts:
           path: ./coverage
-      - run:
-          name: codecov
-          command: codecov/upload
-          environment:
-            file: ./coverage/clover.xml
+      - codecov/upload:
+            file: ./coverage/coverage-final.json
       - run:
           name: build
           command: yarn build
