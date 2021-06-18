@@ -46,6 +46,7 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test --watchAll=false",
+    "coverage": "craco test --coverage --coverageDirectory ./coverage",
     "eject": "react-scripts eject",
     "lint": "tsc --noEmit && eslint --ext .js,.jsx,.ts,.tsx src --color --fix",
     "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
