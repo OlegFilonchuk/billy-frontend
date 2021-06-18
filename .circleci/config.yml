@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@1.1
-  codecov: codecov/codecov@1.0.2
+  codecov: codecov/codecov@1.2.3
 
 jobs:
   build:
@@ -17,11 +17,13 @@ jobs:
       - run:
           name: test
           command: yarn coverage
+      - store_artifacts:
+          path: ./coverage
       - run:
           name: codecov
           command: codecov/upload
           environment:
-            file: ./coverage
+            file: ./coverage/clover.xml
       - run:
           name: build
           command: yarn build
