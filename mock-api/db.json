@@ -119,5 +119,14 @@
       "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
       "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
     }
-  ]
+  ],
+  "balance": {
+    "value": 12345
+  },
+  "weeklyIncome": {
+    "value": 12423
+  },
+  "weeklyExpense": {
+    "value": 21312
+  }
 }

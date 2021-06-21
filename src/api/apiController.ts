@@ -1,4 +1,3 @@
-import { positiveBalance, weeklyExpense, weeklyIncome } from '../mocks';
 import { Category } from '../types';
 
 const BASE_URL = 'http://localhost:3001';
@@ -23,8 +22,32 @@ export const fetchIncomeCategories = async (): Promise<Category[]> => {
   }
 };
 
-export const fetchWeeklyIncome = async () => weeklyIncome;
+export const fetchWeeklyIncome = async (): Promise<number> => {
+  try {
+    const res = await fetch(`${BASE_URL}/weeklyIncome/`);
+    const data = await res.json();
+    return data.value;
+  } catch (e) {
+    return e;
+  }
+};
 
-export const fetchWeeklyExpense = async () => weeklyExpense;
+export const fetchWeeklyExpense = async (): Promise<number> => {
+  try {
+    const res = await fetch(`${BASE_URL}/weeklyExpense/`);
+    const data = await res.json();
+    return data.value;
+  } catch (e) {
+    return e;
+  }
+};
 
-export const fetchBalance = async () => positiveBalance;
+export const fetchBalance = async (): Promise<number> => {
+  try {
+    const res = await fetch(`${BASE_URL}/balance/`);
+    const data = await res.json();
+    return data.value;
+  } catch (e) {
+    return e;
+  }
+};
