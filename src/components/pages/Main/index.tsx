@@ -34,11 +34,12 @@ const Main: FC = () => {
 
       <div className="flex-1 grid grid-cols-mainScreen grid-rows-5">
         {expenseCategories?.map((cat) => {
-          const Icon = cat.icon;
+          // const Icon = cat.icon;
           return (
             <div key={cat.id} className="flex justify-center items-center">
               <Button className="rounded-full">
-                <Icon size={36} />
+                {/* <Icon size={36} /> */}
+                {cat.name}
               </Button>
             </div>
           );

@@ -1,0 +1,123 @@
+{
+  "categories": [
+    {
+      "id": "randomId1",
+      "name": "Salary",
+      "type": "income",
+      "updateDate": "Wed Jan 27 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 27 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId2",
+      "name": "Part-time job",
+      "type": "income",
+      "updateDate": "Wed Jan 26 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 24 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId3",
+      "name": "Alms",
+      "type": "income",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId4",
+      "name": "Car",
+      "type": "expense",
+      "updateDate": "Wed Jan 27 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 27 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId5",
+      "name": "Health",
+      "type": "expense",
+      "updateDate": "Wed Jan 26 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 24 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId6",
+      "name": "Alms",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId7",
+      "name": "Transport",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId8",
+      "name": "Restaurants",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId9",
+      "name": "Food",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId10",
+      "name": "House",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId11",
+      "name": "Sport",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId12",
+      "name": "Taxi",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId13",
+      "name": "Pets",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId14",
+      "name": "Bars",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId15",
+      "name": "Connection",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId16",
+      "name": "Hygiene",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    },
+    {
+      "id": "randomId17",
+      "name": "Presents",
+      "type": "expense",
+      "updateDate": "Wed Jan 13 2021 22:13:00 GMT+0200 (Eastern European Standard Time)",
+      "createDate": "Wed Jan 11 2021 22:13:00 GMT+0200 (Eastern European Standard Time)"
+    }
+  ]
+}

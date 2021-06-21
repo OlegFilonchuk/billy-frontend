@@ -1,14 +1,27 @@
-import {
-  expenseCategories,
-  incomeCategories,
-  positiveBalance,
-  weeklyExpense,
-  weeklyIncome,
-} from '../mocks';
+import { positiveBalance, weeklyExpense, weeklyIncome } from '../mocks';
+import { Category } from '../types';
 
-export const fetchExpenseCategories = async () => expenseCategories;
+const BASE_URL = 'http://localhost:3001';
 
-export const fetchIncomeCategories = async () => incomeCategories;
+export const fetchExpenseCategories = async (): Promise<Category[]> => {
+  try {
+    const res = await fetch(`${BASE_URL}/categories/expense/`);
+    const data = await res.json();
+    return data;
+  } catch (e) {
+    return e;
+  }
+};
+
+export const fetchIncomeCategories = async (): Promise<Category[]> => {
+  try {
+    const res = await fetch(`${BASE_URL}/categories/income/`);
+    const data = await res.json();
+    return data;
+  } catch (e) {
+    return e;
+  }
+};
 
 export const fetchWeeklyIncome = async () => weeklyIncome;
 

@@ -56,7 +56,8 @@
     "size": "bundlesize",
     "deploy-production": "react-scripts build && scp -r ./build/* root@164.90.164.204:/var/www/billy.pp.ua/html",
     "cy:run": "cypress open",
-    "test:e2e": "start-server-and-test :3000 cy:run"
+    "test:e2e": "start-server-and-test :3000 cy:run",
+    "mock-api": "json-server mock-api/db.json --routes mock-api/routes.json --port 3001"
   },
   "bundlesize": [
     {

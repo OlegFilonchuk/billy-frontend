@@ -82,7 +82,7 @@ export type ProfileData = {
 export type Category = {
   id: Id;
   name: string;
-  icon: IconType;
+  // icon: IconType;
   type: OpType;
   createDate: DateString;
   updateDate: DateString;

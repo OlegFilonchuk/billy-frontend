@@ -1,0 +1,4 @@
+{
+  "/categories/:type": "/categories?type=:type",
+  "/categories/:type/:name": "/categories?type=:type&name=:name"
+}
