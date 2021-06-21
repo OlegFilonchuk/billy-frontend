@@ -56,7 +56,9 @@
     "size": "bundlesize",
     "deploy-production": "react-scripts build && scp -r ./build/* root@164.90.164.204:/var/www/billy.pp.ua/html",
     "cy:run": "cypress open",
-    "test:e2e": "start-server-and-test :3000 cy:run"
+    "test:e2e": "start-server-and-test :3000 cy:run",
+    "mock-api": "json-server mock-api/db.json --routes mock-api/routes.json --port 3001",
+    "dev": "run-p mock-api start"
   },
   "bundlesize": [
     {
@@ -103,6 +105,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4",
     "husky": "^5.0.6",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "start-server-and-test": "^1.12.5"
   }

@@ -42,7 +42,7 @@ const CategoryPicker: FC<Props> = ({ open, opType, onClick }) => {
     >
       <div className="grid grid-cols-3 gap-1">
         {categories?.map((cat) => {
-          const Icon = cat.icon;
+          // const Icon = cat.icon;
           return (
             <Button
               key={cat.id}
@@ -51,7 +51,7 @@ const CategoryPicker: FC<Props> = ({ open, opType, onClick }) => {
               className="shadow-md"
               onClick={() => onClick(cat)}
             >
-              <Icon size={30} />
+              {/* <Icon size={30} /> */}
               {cat.name}
             </Button>
           );
